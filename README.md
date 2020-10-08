@@ -38,3 +38,6 @@ To check the live demo you can go to this link: <a href="https://hackathonkl20.a
 5. php artisan migrate
 
 ```
+
+#### Presentation slide
+For the presentation slide please click here <a href="https://liveiiumedu-my.sharepoint.com/:p:/g/personal/adis_live_iium_edu_my/Eb-kpY685mlHlWutQWBiFloB58NjCv6RzITIsjrIbfgdWQ?e=ACLf8F" target="_blank"> Presentation Slide </a>
