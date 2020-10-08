@@ -29,6 +29,17 @@
                     <img src="{{ url('hackathon.png')}}" alt="" style="height:120px">
                 </div>
 
+                <div class="mt-12 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="text-center">
+                          <img src="{{ url('result.gif') }}" alt="">
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
@@ -55,11 +66,10 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
 
                                     @if (session('encrypt'))
-                                      <textarea name="name" rows="8" cols="50">
-                                            {{ session('encrypt') }}
-                                      </textarea>
+                                      <p>  {{ session('encrypt') }}</p>
 
-                                      <br><br>
+
+                                      <br>
                                       <p class="text-center"><img src="{{ route('qr-image', ['code'=> session('encrypt')])}}"></p>
                                         <p>Use this QR Code to scan and prefilled form   <a href="{{ route('form') }}"> here </a></p>
                                         <a href="{{  route('qr-image', ['code'=> session('encrypt')]) }}" download>Download QR</a>
@@ -71,6 +81,7 @@
                                 </div>
                             </div>
                         </div>
+
 
 
                     </div>
