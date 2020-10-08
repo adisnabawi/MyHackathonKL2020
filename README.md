@@ -1,5 +1,5 @@
 # My Hackathon KL 2020
-## A solution for the PRIHATIN THEMES No. 4 
+## A solution for the PRIHATIN THEMES No. 4 - QR Identity
 
 
 Our solution is based on the QR Code where the information is encrypted and users just need to scan the QR code. It will populate the input form automatically.
