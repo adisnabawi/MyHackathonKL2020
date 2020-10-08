@@ -17,9 +17,20 @@ The dencrypted data as follow:
 }
 ```
 
-The key to encrypt for this test is:
+Encryption that we use are
 ```
-myhackathon2020
+AES-256-CBC
+MD5
 ```
 
 #### Please check the live demo
+
+#### To try out
+```
+1. Download the demo folder
+2. composer install
+3. cp .env.sample .env
+4. php artisan key:generate
+5. php artisan migrate
+
+```
