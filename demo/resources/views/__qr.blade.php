@@ -15,9 +15,17 @@
         $.ajax({
             url: '{{route("fill")}}',
             method: 'post',
-            data: {},
+            data: {
+              "key": result,
+            },
             success: function (data) {
-                console.log(data);
+                data = JSON.parse(data);
+                console.log(data.nama);
+                $('#nama').val(data.nama);
+                $('#ic').val(data.ic);
+                $('#alamat').val(data.alamat);
+                $('#warganegara').val(data.status);
+                $('#status').html('The data is auto populate');
               }
             });
 

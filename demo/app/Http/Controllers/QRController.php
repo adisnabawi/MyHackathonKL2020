@@ -29,6 +29,6 @@ class QRController extends Controller
     public function fill(Request $request){
       $data = Encrypt::where('key', $request->key)->first();
       $decrypt = Crypt::decrypt($data->data);
-      return response()->json(['data' => $decrypt]);
+      return response()->json($decrypt);
     }
 }

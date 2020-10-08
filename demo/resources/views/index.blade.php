@@ -61,7 +61,6 @@
 
                                       <br><br>
                                       <p class="text-center"><img src="{{ route('qr-image', ['code'=> session('encrypt')])}}"></p>
-
                                         <p>Use this QR Code to scan and prefilled form   <a href="{{ route('form') }}"> here </a></p>
                                         <a href="{{  route('qr-image', ['code'=> session('encrypt')]) }}" download>Download QR</a>
                                         <a href="{{ route('form') }}">Fill form</a>
