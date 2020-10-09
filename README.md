@@ -41,3 +41,6 @@ To check the live demo you can go to this link: <a href="https://hackathonkl20.a
 
 #### Presentation slide
 For the presentation slide please download here <a href="https://github.com/adisnabawi/MyHackathonKL2020/raw/main/qr_identity.pdf" target="_blank"> Presentation Slide </a>
+
+#### Future Works
+By using an application installed in users phone to generated QR Code with unique identification for more secure and flexibility
