@@ -28,75 +28,78 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <img src="{{ url('hackathon.png')}}" alt="" style="height:120px">
                 </div>
-
-                <div class="mt-12 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                  <div class="card">
-                    <div class="card-body">
-                      <p class="text-center">
-                          <img src="{{ url('result.gif') }}" alt="">
-                      </p>
+                <div class="container">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="text-center">
+                            <img src="{{ url('result.gif') }}" style="width:100%">
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                </div>
+                  <div class="col-md-12">
+                    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" style="padding:20px">
+                        <div class="grid grid-cols-1 md:grid-cols-2 row">
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <form class="" action="{{ route('qr')}}" method="post">
-                              @csrf
-                              <textarea name="data" rows="8" cols="50" id="json">
-                                {
-                                 "nama":"adis nabawi",
-                                 "ic":910112111234,
-                                 "alamat":"Kampung Siput, Dimana mana, 06000 Jitra, Kedah",
-                                 "status":"warganegara",
-                                 "agama":"islam",
-                                 "jantina":"lelaki"
-                                }
-                              </textarea>
-                              <br>
-                              <input type="submit" name="" value="Generate QR" style="padding:10px;">
-                            </form>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-
-                                    @if (session('encrypt'))
-                                      <p>  {{ session('encrypt') }}</p>
-
-
-                                      <br>
-                                      <p class="text-center"><img src="{{ route('qr-image', ['code'=> session('encrypt')])}}"></p>
-                                        <p>Use this QR Code to scan and prefilled form   <a href="{{ route('form') }}"> here </a></p>
-                                        <a href="{{  route('qr-image', ['code'=> session('encrypt')]) }}" download>Download QR</a>
-                                        <a href="{{ route('form') }}">Fill form</a>
-                                    @endif
-
-
-
-                                </div>
+                            <div class="col-md-6">
+                                <form class="" action="{{ route('qr')}}" method="post">
+                                  @csrf
+                                  <div class="form-group">
+                                    <textarea name="data" rows="8" cols="50" id="json" class="form-control">
+                                      {
+                                       "nama":"adis nabawi",
+                                       "ic":910112111234,
+                                       "alamat":"Kampung Siput, Dimana mana, 06000 Jitra, Kedah",
+                                       "status":"warganegara",
+                                       "agama":"islam",
+                                       "jantina":"lelaki"
+                                      }
+                                    </textarea>
+                                  </div>
+                                  <br>
+                                  <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" value="Generate QR">
+                                  </div>
+                                </form>
                             </div>
+
+                            <div class="col-md-6">
+                                @if (session('encrypt'))
+                                  <p style="word-wrap:break-word">
+                                    <b>Token:</b> {{ session('encrypt') }}
+                                  </p>
+
+                                  <br>
+                                  <p class="text-center"><img src="{{ route('qr-image', ['code'=> session('encrypt')])}}"></p>
+                                    <p>Use this QR Code to scan and prefilled form   <a href="{{ route('form') }}"> here </a></p>
+                                    <div class="d-inline">
+                                      <a href="{{  route('qr-image', ['code'=> session('encrypt')]) }}" download class="btn btn-info" style="margin:5px">Download QR</a>
+                                      <a href="{{ route('form') }}" class="btn btn-success" style="margin:5px">Fill form</a>
+                                    </div>
+
+                                @endif
+                            </div>
+
+
+
                         </div>
-
-
-
                     </div>
+                  </div>
+
+                  <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                      <div class="text-center text-sm text-gray-500 sm:text-left">
+
+                      </div>
+
+                      <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                          Build v{{ Illuminate\Foundation\Application::VERSION }}
+                          <br><br>
+                      </div>
+                  </div>
                 </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Build v{{ Illuminate\Foundation\Application::VERSION }}
-                    </div>
-                </div>
-            </div>
+              </div>
         </div>
     </body>
 

@@ -28,39 +28,18 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <img src="{{ url('hackathon.png')}}" alt="" style="height:120px">
                 </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                          <p id="status" style="color:red"></p>
-                            <form class="" action="{{ route('qr')}}" method="post">
-                              @csrf
-                              <div class="form-group">
-                                  <label for="exampleInputEmail1">Nama</label>
-                                  <input type="text" class="form-control" id="nama" aria-describedby="emailHelp" name="nama">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">IC No</label>
-                                  <input type="text" class="form-control" id="ic">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">Warganegara</label>
-                                  <input type="text" class="form-control" id="warganegara">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">Alamat</label>
-                                  <textarea class="form-control" id="alamat"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-
+                <div class="container">
+                  <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                      <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                            <div class="col-md-12">
+                                <div class="text-gray-600 text-sm">
+                                  <p class="text-center">Please scan the QR code and it will autopopulate the data.</p>
                                   <p id="cam-has-camera"></p>
-                                  <video id="qrscan" playsinline muted>
+
+                                  <br><br>
+                                  <video id="qrscan" playsinline muted height="200px" width="100%">
 
                                   </video>
 
@@ -68,18 +47,44 @@
                             </div>
                         </div>
 
+                          <div class="p-6">
+                            <p id="status" style="color:red"></p>
+                              <form class="" action="{{ route('qr')}}" method="post">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nama</label>
+                                    <input type="text" class="form-control" id="nama" aria-describedby="emailHelp" name="nama">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">IC No</label>
+                                    <input type="text" class="form-control" id="ic">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Warganegara</label>
+                                    <input type="text" class="form-control" id="warganegara">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Alamat</label>
+                                    <textarea class="form-control" id="alamat"></textarea>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+                          </div>
 
-                    </div>
-                </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
+                      </div>
+                  </div>
 
-                    </div>
+                  <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                      <div class="text-center text-sm text-gray-500 sm:text-left">
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Build v{{ Illuminate\Foundation\Application::VERSION }}
-                    </div>
+                      </div>
+
+                      <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                          Build v{{ Illuminate\Foundation\Application::VERSION }}
+                      </div>
+                      <br><br>
+                  </div>
                 </div>
             </div>
         </div>
