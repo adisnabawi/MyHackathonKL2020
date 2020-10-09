@@ -39,7 +39,7 @@
                                   <p id="cam-has-camera"></p>
 
                                   <br><br>
-                                  <video id="qrscan" playsinline muted height="200px" width="100%">
+                                  <video id="qrscan" playsinline muted>
 
                                   </video>
 
