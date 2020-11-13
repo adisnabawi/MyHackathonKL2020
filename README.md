@@ -42,6 +42,10 @@ To check the live demo you can go to this link: <a href="https://hackathonkl20.a
 #### Presentation slide
 For the presentation slide please download here <a href="https://github.com/adisnabawi/MyHackathonKL2020/raw/main/qr_identity.pdf" target="_blank"> Presentation Slide </a>
 
+#### QR Image
+You can use QR image below to try in <a href="https://hackathonkl20.adisazizan.xyz/form">form auto-fill</a> <br /> <br />
+<img src="https://raw.githubusercontent.com/adisnabawi/MyHackathonKL2020/main/qr-image.png" />
+
 #### Future Works
 By using an application installed in users phone to generated QR Code with unique identification for more secure and flexibility. 
 The implements of blockchain also needed. Will work on this in the future. 
